@@ -1,6 +1,6 @@
 using System;
 
-namespace Playlist_Proj.Models
+namespace Playlist_Project.Models
 {
     public class ErrorViewModel
     {

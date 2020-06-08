@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playlist_Proj", "Playlist_Proj.csproj", "{93176A47-DD99-4E87-B3E2-C56520A97DF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playlist_Project", "Playlist_Project.csproj", "{21AB23EE-DBA6-4DBB-8F71-BC6C56D6E42C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{93176A47-DD99-4E87-B3E2-C56520A97DF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93176A47-DD99-4E87-B3E2-C56520A97DF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93176A47-DD99-4E87-B3E2-C56520A97DF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93176A47-DD99-4E87-B3E2-C56520A97DF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AB23EE-DBA6-4DBB-8F71-BC6C56D6E42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AB23EE-DBA6-4DBB-8F71-BC6C56D6E42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AB23EE-DBA6-4DBB-8F71-BC6C56D6E42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AB23EE-DBA6-4DBB-8F71-BC6C56D6E42C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {64985ACE-19C0-4539-8A18-13032284D49F}
+		SolutionGuid = {1AA16B23-06DC-44DF-B6EA-3016A62343DE}
 	EndGlobalSection
 EndGlobal

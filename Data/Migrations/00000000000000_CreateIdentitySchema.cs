@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Playlist_Proj.Data.Migrations
+namespace Playlist_Project.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

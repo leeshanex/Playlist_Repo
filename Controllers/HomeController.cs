@@ -5,17 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Playlist_Proj.Models;
+using Playlist_Project.Models;
 
-namespace Playlist_Proj.Controllers
+namespace Playlist_Project.Controllers
 {
     public class HomeController : Controller
     {
-        
+        private readonly ILogger<HomeController> _logger;
 
-        public HomeController()
+        public HomeController(ILogger<HomeController> logger)
         {
-            
+            _logger = logger;
         }
 
         public IActionResult Index()

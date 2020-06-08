@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Playlist_Proj.Data
+namespace Playlist_Project.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
