@@ -13,6 +13,9 @@ namespace Playlist_Project.Models
     {
         [Key]
 
+
+
+
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }
         public IdentityUser IdentityUser { get; set; }
