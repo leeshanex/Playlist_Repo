@@ -12,5 +12,6 @@ namespace Playlist_Project.Data
             : base(options)
         {
         }
+
     }
 }
