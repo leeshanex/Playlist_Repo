@@ -1,10 +1,9 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Playlist_Project.Data.Migrations
+namespace Playlist_Project.Migrations
 {
-    public partial class CreateIdentitySchema : Migration
+    public partial class SeedMusicsTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -48,11 +47,26 @@ namespace Playlist_Project.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Music",
+                columns: table => new
+                {
+                    SongId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SongTitle = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Artist = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Genre = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Music", x => x.SongId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     RoleId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -73,7 +87,7 @@ namespace Playlist_Project.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -93,8 +107,8 @@ namespace Playlist_Project.Data.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
@@ -138,8 +152,8 @@ namespace Playlist_Project.Data.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    Name = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -151,6 +165,63 @@ namespace Playlist_Project.Data.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Music",
+                columns: new[] { "SongId", "Artist", "Genre", "SongTitle" },
+                values: new object[,]
+                {
+                    { 1, "Roddy Ricch", "Hip-Hop", "The Box" },
+                    { 28, "*NSYNC", "Pop", "Bye Bye Bye" },
+                    { 29, "Michael Jackson", "Pop", "Thriller" },
+                    { 30, "Britney Spears", "Pop", "Toxic" },
+                    { 31, "Daft Punk", "Electronic", "One More Time" },
+                    { 32, "Martin Garrix", "Electronic", "Animals" },
+                    { 33, "Rihanna", "Electronic", "We Found Love" },
+                    { 34, "Lil Jon", "Electronic", "Turn Down For What" },
+                    { 35, "Swedish House Mafia", "Electronic", "Don't You Worry Child" },
+                    { 36, "Mr. Probz", "Electronic", "Waves" },
+                    { 37, "Zedd", "Electronic", "I Want you To Know" },
+                    { 38, "Diplo, Skrillex, Justin Bieber", "Electronic", "Where Are U Now" },
+                    { 39, "Robin Schulz", "Electronic", "Sugar" },
+                    { 40, "Disclose", "Electronic", "White Noise" },
+                    { 41, "Ginuwine", "R&B", "Pony" },
+                    { 42, "Destiny's Child", "R&B", "Say My Name" },
+                    { 43, "Shaggy", "R&B", "It Wasn't Me" },
+                    { 44, "Beyonce", "R&B", "Halo" },
+                    { 45, "Brandy, Monica", "R&B", "The Boy Is Mine" },
+                    { 46, "Ella Mai", "R&B", "Trip" },
+                    { 47, "Snoh Aalegra", "R&B", "I Want You Around" },
+                    { 48, "TLC", "R&B", "Waterfalls" },
+                    { 27, "Drake", "Pop", "Hotline Bling" },
+                    { 26, "Gotye", "Pop", "Somebody That I Used To Know" },
+                    { 25, "Rihanna", "Pop", "Umbrella" },
+                    { 24, "Justin Timberlake", "Pop", "My Love" },
+                    { 2, "Meg Thee Stallion, Beyonce", "Hip-Hop", "Savage Remix" },
+                    { 3, "Run-D.M.C.", "Hip-Hop", "It's Tricky" },
+                    { 4, "DaBaby", "Hip-Hop", "BOP" },
+                    { 5, "Drake, Future", "Hip-Hop", "Life Is Good" },
+                    { 6, "Kendrick Lamar", "Hip-Hop", "DNA" },
+                    { 7, "Big Sean", "Hip-Hop", "I Don't F**k With You" },
+                    { 8, "Cardi B", "Hip-Hop", "I Like It" },
+                    { 9, "Jay-Z", "Hip-Hop", "Big Pimpin" },
+                    { 10, "Kanye West", "Hip-Hop", "All Of The Lights" },
+                    { 11, "Prince", "Rock", "When Doves Cry" },
+                    { 49, "Childish Gambino", "R&B", "Redbone" },
+                    { 12, "Weezer", "Rock", "Island In The Sun" },
+                    { 14, "The Beatles", "Rock", "Come Together" },
+                    { 15, "Journey", "Rock", "Don't Stop Believin" },
+                    { 16, "AC/DC", "Rock", "Back In Black" },
+                    { 17, "Red Hot Chili Peppers", "Rock", "Can't Stop" },
+                    { 18, "The Black Keys", "Rock", "Heavy Soul" },
+                    { 19, "Nirvana", "Rock", "Come As You Are" },
+                    { 20, "Guns N' Roses", "Rock", "Sweet Child O' Mine" },
+                    { 21, "Aviccii", "Pop", "Wake Me Up" },
+                    { 22, "Imagine Dragons", "Pop", "Radioactive" },
+                    { 23, "Sara Baraeilles", "Pop", "Love Song" },
+                    { 13, "The Killers", "Rock", "Mr. Brightside" },
+                    { 50, "Usher, Alica Keys", "R&B", "My Boo" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -209,6 +280,9 @@ namespace Playlist_Project.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Music");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
