@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Playlist_Project.Data;
 
 namespace Playlist_Project.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200609184752_update")]
+    partial class update
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,15 +50,15 @@ namespace Playlist_Project.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ef7a9d6f-1ec4-4cac-8a85-f91a46832b42",
-                            ConcurrencyStamp = "e472632f-7460-4396-8409-9f74b8d0862a",
+                            Id = "0ee75284-be2e-4353-80a3-907f7be503ff",
+                            ConcurrencyStamp = "1eddbc41-f97a-4065-91b8-f5c49402d542",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "5a4ea41f-a1b9-4e77-b2f0-2904b1cfd0c6",
-                            ConcurrencyStamp = "2b15f80a-ff95-4ea1-9e97-db86caa2d426",
+                            Id = "712ef39a-7eb4-43ef-85bd-5ce7af975dd4",
+                            ConcurrencyStamp = "62bdb8f5-c5ae-4b30-acbb-75ff7bdb2ab8",
                             Name = "NewUser",
                             NormalizedName = "NewUser"
                         });
