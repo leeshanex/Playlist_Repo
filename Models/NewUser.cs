@@ -12,7 +12,18 @@ namespace Playlist_Project.Models
     public class NewUser
     {
         [Key]
+        public int Id { get; set; }
 
+        [Display(Name ="First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Zip Code")]
+        public int ZipCode { get; set; }
+
+        public string Image { get; set; }
 
 
 
