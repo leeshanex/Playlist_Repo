@@ -17,7 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <Folder Include="Data\Migrations\" />
+=======
+    <Folder Include="wwwroot\UploadedImages\" />
+>>>>>>> f9bf2c9d621d637c80b629b3cd57ea039b41bea0
   </ItemGroup>
 
 </Project>
