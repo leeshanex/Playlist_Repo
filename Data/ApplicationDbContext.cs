@@ -372,5 +372,6 @@ namespace Playlist_Project.Data
                     });
 
         }
+        public DbSet<NewUser> NewUsers { get; set; }
     }
 }
