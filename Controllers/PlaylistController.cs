@@ -149,5 +149,11 @@ namespace Playlist_Project.Controllers
         {
             return _context.Musics.Any(e => e.SongId == id);
         }
+
+        public ActionResult Random()
+        {
+            var randomPlaylist = _context.Musics.FirstOrDefault();
+            return View(randomPlaylist);
+        }
     }
 }
