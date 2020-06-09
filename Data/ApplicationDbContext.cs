@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Playlist_Project.Models;
 
 namespace Playlist_Project.Data
 {
@@ -28,5 +29,6 @@ namespace Playlist_Project.Data
                 { Name = "NewUser", NormalizedName = "NewUser" });
 
         }
+        public DbSet<NewUser> NewUsers { get; set; }
     }
 }
