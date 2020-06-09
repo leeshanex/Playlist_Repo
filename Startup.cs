@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -41,6 +41,9 @@ namespace Playlist_Project
             });
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<Playlist_ProjectContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("Playlist_ProjectContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
