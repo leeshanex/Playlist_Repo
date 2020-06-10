@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Playlist_Project.Models;
+using Playlist_Project.Services;
 
 namespace Playlist_Project.Controllers
 {
     public class HomeController : Controller
     {
-      
-        public HomeController()
+        private MusicSearchService _musicSearchService;
+        public HomeController(MusicSearchService musicSearchService)
         {
-           
+            _musicSearchService = musicSearchService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            MusicSearch searchedMusic = await _musicSearchService.GetMusicSearched();
             return View();
         }
 

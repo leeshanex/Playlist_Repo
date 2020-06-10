@@ -16,7 +16,9 @@ namespace Playlist_Project.Services
         }
         public async Task<MusicSearch> GetMusicSearched()
         {
-            string url = $"https://api.deezer.com/search?redirect_uri=http%253A%252F%252Fguardian.mashape.com%252Fcallback&q=odesza&index=25";
+            string userInput = "odesza";
+            string q = userInput.ToLower();
+            string url = $"https://api.deezer.com/search?q={q}";
         HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)

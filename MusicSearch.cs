@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Net.Http;
-using System.Threading.Tasks;
-
+﻿
 namespace Playlist_Project.Models
 {
     public class MusicSearch
@@ -59,3 +56,4 @@ namespace Playlist_Project.Models
     }
 
 }
+
