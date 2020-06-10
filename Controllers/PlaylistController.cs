@@ -155,5 +155,11 @@ namespace Playlist_Project.Controllers
             var randomPlaylist = _context.Musics.FirstOrDefault();
             return View(randomPlaylist);
         }
+
+        public ActionResult Search(string? Name, string? Genre,  string? Albums)
+        {
+            var searchedSong = _context.Musics.Where(m => m.SongTitle == Name);
+            return View();
+        }
     }
 }
