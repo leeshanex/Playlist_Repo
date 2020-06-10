@@ -21,8 +21,9 @@ namespace Playlist_Project.Services
             HttpResponseMessage response = await client.GetAsync(url);
             if (response.IsSuccessStatusCode)
             {
-                string json = response.Content.ReadAsStringAsync().Result;
-                return JsonConvert.DeserializeObject<MusicSearch>(json);
+                string json = await response.Content.ReadAsStringAsync();
+                MusicSearch musicSearch = JsonConvert.DeserializeObject<MusicSearch>(json);
+                return (musicSearch);
             }
             return null;
         }
