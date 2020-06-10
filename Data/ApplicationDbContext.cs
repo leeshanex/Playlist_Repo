@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -21,6 +22,13 @@ namespace Playlist_Project.Data
         {
             {
                 base.OnModelCreating(builder);
+                //builder.Entity<IdentityRole>()
+                    //.HasData(new IdentityRole
+                    //{
+                    //    Name = "NewUser",
+                    //    NormalizedName = "NEWUSER"
+                    //}
+                    //);
             }
             builder
                 .HasAnnotation("ProductVersion", "3.0.1")
