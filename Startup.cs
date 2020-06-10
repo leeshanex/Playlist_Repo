@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using Playlist_Project.Models;
+using Playlist_Project.Services;
 
 namespace Playlist_Project
 {
@@ -43,8 +44,7 @@ namespace Playlist_Project
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddTransient<MusicSearch>();
-
-           
+            services.AddScoped<MusicSearchService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
