@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
+using Playlist_Project.Models;
 
 namespace Playlist_Project
 {
@@ -41,6 +42,7 @@ namespace Playlist_Project
             });
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddTransient<MusicSearch>();
 
            
         }
