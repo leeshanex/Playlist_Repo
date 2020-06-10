@@ -23,15 +23,15 @@ namespace Playlist_Project.Controllers
         {
             _context = context;
         }
-        
+
         // GET: NewUser
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             NewUser newUser;
             try
             {
                 var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier); //gets your nameIdentifer
-                newUser = _context.NewUsers.Where(c => c.IdentityUserId == userId).Single(); 
+                newUser = _context.NewUsers.Where(c => c.IdentityUserId == userId).Single();
             }
             catch (Exception)
             {
@@ -82,7 +82,7 @@ namespace Playlist_Project.Controllers
 
 
         // GET: NewUser/Edit/5
-        public async Task<ActionResult> Edit()
+        public ActionResult Edit()
         {
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             NewUser newUser = _context.NewUsers.Where(c => c.IdentityUserId == userId).Single();
