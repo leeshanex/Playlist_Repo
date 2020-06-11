@@ -61,7 +61,8 @@ namespace Playlist_Project.Controllers
         // GET: NewUser/Create
         public ActionResult Create()
         {
-            return View();
+            NewUser newUser = new NewUser();
+            return View(newUser);
         }
 
         // POST: NewUser/Create
@@ -106,7 +107,6 @@ namespace Playlist_Project.Controllers
                     newUserFromDb.FirstName = newUser.FirstName;
                     newUserFromDb.LastName = newUser.LastName;
                     newUserFromDb.ZipCode = newUser.ZipCode;
-                    newUserFromDb.Image = newUser.Image;
                     await _context.SaveChangesAsync();
                     // TODO: Add update logic here
                 }
