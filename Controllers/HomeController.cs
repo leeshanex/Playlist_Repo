@@ -5,21 +5,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Playlist_Project.Data;
 using Playlist_Project.Models;
 
 namespace Playlist_Project.Controllers
 {
     public class HomeController : Controller
     {
-      
-        public HomeController()
+        private readonly ApplicationDbContext _context;
+
+        public HomeController(ApplicationDbContext context)
         {
-           
+            _context = context;
         }
 
         public IActionResult Index()
         {
-            return View();
+            string genre = "Hip-Hop";
+            Random r = new Random();
+            var randomPlaylist = _context.Musics.Where(m => m.Genre == genre).OrderBy(m => r.Next()).Take(10);
+            var displyRandomPlaylist = randomPlaylist;
+            return View(displyRandomPlaylist);
         }
 
         public IActionResult Privacy()
