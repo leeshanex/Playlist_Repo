@@ -9,15 +9,14 @@ namespace Playlist_Project.Models
     public class FriendsList
     {
         public int Id { get; set; }
-        public string friendName { get; set; }
+       
+        [ForeignKey("Friend1")]
+        public int Friend1Id { get; set; }
+        public NewUser Friend1 { get; set; }
 
-        [ForeignKey("friendId1")]
-        public int friendId { get; set; }
-        public NewUser friendId1 { get; set; }
+        [ForeignKey("Friend2")]
 
-        [ForeignKey("friendId2")]
-
-        public int friendIdTwo { get; set; }
-        public NewUser friendId2 { get; set; }
+        public int Friend2Id { get; set; }
+        public NewUser Friend2 { get; set; }
     }
 }
