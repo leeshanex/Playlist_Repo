@@ -108,7 +108,6 @@ namespace Playlist_Project.Controllers
                     newUserFromDb.FirstName = newUser.FirstName;
                     newUserFromDb.LastName = newUser.LastName;
                     newUserFromDb.ZipCode = newUser.ZipCode;
-                    newUserFromDb.Image = newUser.Image;
                     await _context.SaveChangesAsync();
                     // TODO: Add update logic here
                 }
