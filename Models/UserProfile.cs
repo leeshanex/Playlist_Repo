@@ -8,7 +8,7 @@ namespace Playlist_Project.Models
 {
     public class UserProfile
     {
-
+        [Key]
         [Display(Name = "Profile Picture")]
         public string Image { get; set; }
 
