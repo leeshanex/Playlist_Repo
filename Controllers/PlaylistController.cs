@@ -21,8 +21,9 @@ namespace Playlist_Project.Controllers
 
         // GET: Playlist
         public async Task<IActionResult> Index()
-        {
-            return View(await _context.Musics.ToListAsync());
+        { 
+            var listOfSongs = await _context.Musics.ToListAsync();
+            return View(listOfSongs);
         }
 
         // GET: Playlist/Details/5

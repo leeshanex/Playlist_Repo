@@ -19,8 +19,7 @@ namespace Playlist_Project.Controllers
         }
 
         public async Task<IActionResult> Index()
-        {
-            MusicSearch searchedMusic = await _musicSearchService.GetMusicSearched();
+        {  
             return View();
         }
 
@@ -33,6 +32,12 @@ namespace Playlist_Project.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public async Task<IActionResult> MusicSearch()
+        {
+            MusicSearch searchedMusic = await _musicSearchService.GetMusicSearched();
+            var displaySampleTrack = searchedMusic;
+            return View();
         }
     }
 }

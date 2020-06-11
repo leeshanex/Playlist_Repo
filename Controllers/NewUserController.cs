@@ -14,7 +14,6 @@ using Playlist_Project.Models;
 
 namespace Playlist_Project.Controllers
 {
-    [Authorize(Roles = "NewUser")]
     public class NewUserController : Controller
     {
         private readonly ApplicationDbContext _context;
