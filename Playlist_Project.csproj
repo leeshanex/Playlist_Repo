@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Folder Include="Data\Migrations\" />
+    <Folder Include="Interface\" />
     <Folder Include="wwwroot\UploadedImages\" />
   </ItemGroup>
 

@@ -35,9 +35,11 @@ namespace Playlist_Project.Controllers
         }
         public async Task<IActionResult> MusicSearch()
         {
-            MusicSearch searchedMusic = await _musicSearchService.GetMusicSearched();
+            
+            Datum searchedMusic = await _musicSearchService.GetMusicSearched();
+
             var displaySampleTrack = searchedMusic;
-            return View();
+            return View(displaySampleTrack);
         }
     }
 }

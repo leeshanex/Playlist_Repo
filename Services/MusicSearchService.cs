@@ -14,20 +14,28 @@ namespace Playlist_Project.Services
         {
 
         }
-        public async Task<MusicSearch> GetMusicSearched()
+        public async Task<Datum> GetMusicSearched()
         {
-            string userInput = "";
+            HttpRequestMessage request = new HttpRequestMessage();
+            string userInput = "odesza";
             string q = userInput.ToLower();
-            string url = $"https://api.deezer.com/search?q={q}";
-        HttpClient client = new HttpClient();
+            string url = $"https://deezerdevs-deezer.p.rapidapi.com/search?q=odesza";
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com");
+            client.DefaultRequestHeaders.Add("x-rapidapi-key", APIKeys.OpenMusicSearchKey);
+
             HttpResponseMessage response = await client.GetAsync(url);
+            
             if (response.IsSuccessStatusCode)
             {
                 string json = await response.Content.ReadAsStringAsync();
-                MusicSearch musicSearch = JsonConvert.DeserializeObject<MusicSearch>(json);
+                Datum musicSearch = JsonConvert.DeserializeObject<Datum>(json);
                 return (musicSearch);
             }
             return null;
         }
+        
+
+        
     }
 }
