@@ -22,13 +22,20 @@ namespace Playlist_Project.Data
         {
             {
                 base.OnModelCreating(builder);
-                //builder.Entity<IdentityRole>()
-                    //.HasData(new IdentityRole
-                    //{
-                    //    Name = "NewUser",
-                    //    NormalizedName = "NEWUSER"
-                    //}
-                    //);
+                builder.Entity<IdentityRole>()
+                    .HasData(new IdentityRole
+                    {
+                        Name = "Admin",
+                        NormalizedName = "ADMIN"
+                    }
+                    );
+                builder.Entity<IdentityRole>()
+               .HasData(new IdentityRole
+                 {
+                     Name = "NewUser",
+                     NormalizedName = "NEWUSER"
+                 }
+                    );
             }
             builder
                 .HasAnnotation("ProductVersion", "3.0.1")

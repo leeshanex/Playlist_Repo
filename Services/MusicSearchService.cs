@@ -16,7 +16,7 @@ namespace Playlist_Project.Services
         }
         public async Task<MusicSearch> GetMusicSearched()
         {
-            string userInput = "odesza";
+            string userInput = "";
             string q = userInput.ToLower();
             string url = $"https://api.deezer.com/search?q={q}";
         HttpClient client = new HttpClient();
