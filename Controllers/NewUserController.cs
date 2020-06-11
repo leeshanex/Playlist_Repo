@@ -62,7 +62,8 @@ namespace Playlist_Project.Controllers
         // GET: NewUser/Create
         public ActionResult Create()
         {
-            return View();
+            NewUser newUser = new NewUser();
+            return View(newUser);
         }
 
         // POST: NewUser/Create
