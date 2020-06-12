@@ -43,7 +43,6 @@ namespace Playlist_Project
             });
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.AddTransient<MusicSearch>();
             services.AddScoped<MusicSearchService>();
         }
 
