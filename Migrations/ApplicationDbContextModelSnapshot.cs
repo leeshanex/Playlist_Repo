@@ -48,8 +48,15 @@ namespace Playlist_Project.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "47af8efa-1039-438d-b51d-76602a2f9967",
-                            ConcurrencyStamp = "d74c1f39-1db8-4c32-898b-4da6f2b311f0",
+                            Id = "d128da00-6fc1-46ad-bc4b-2a7795c3e1be",
+                            ConcurrencyStamp = "51eda51c-b430-485c-a04b-b965b8615b86",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "d993c0fd-d7ef-487a-b9bb-1f85d39c2c5a",
+                            ConcurrencyStamp = "aec3e072-219f-465b-8c5b-24cebf99ba61",
                             Name = "NewUser",
                             NormalizedName = "NEWUSER"
                         });
@@ -610,9 +617,6 @@ namespace Playlist_Project.Migrations
                     b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
@@ -624,6 +628,30 @@ namespace Playlist_Project.Migrations
                     b.HasIndex("IdentityUserId");
 
                     b.ToTable("NewUsers");
+                });
+
+            modelBuilder.Entity("Playlist_Project.Models.UserProfile", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FavoriteMusicGenre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FriendsList")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LikedMusic")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserProfiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

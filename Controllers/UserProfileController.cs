@@ -1,24 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Playlist_Project.Data;
+using Playlist_Project.Models;
 
 namespace Playlist_Project.Controllers
 {
     public class UserProfileController : Controller
     {
-        // GET: UserProfile
-        public ActionResult Index()
+        private readonly ApplicationDbContext _context;
+
+        public UserProfileController(ApplicationDbContext context)
         {
-            return View();
+            _context = context;
+        }
+        // GET: UserProfile
+        public IActionResult Index()
+        {
+            NewUser newUser;
+            try
+            {
+                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier); //gets your nameIdentifer
+                newUser = _context.NewUsers.Where(c => c.IdentityUserId == userId).Single();
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("create"); //if fails then creates 
+            }
+            return View(newUser);
         }
 
-        // GET: UserProfile/Details/5
-        public ActionResult Details(int id)
+        public async Task<IActionResult> Details(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var newUser = await _context.NewUsers.Include(c => c.IdentityUser).FirstOrDefaultAsync(m => m.Id == id);
+
+            if (newUser == null)
+            {
+                return NotFound();
+            }
+
+            return View(newUser);
         }
 
         // GET: UserProfile/Create
