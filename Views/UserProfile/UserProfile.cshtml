@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Playlist_Project.Models.UserProfile>
+
+@{
+    ViewData["Title"] = "UserProfile";
+}
+
+<h1>UserProfile</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FavoriteMusicGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FriendsList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LikedMusic)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FavoriteMusicGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FriendsList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LikedMusic)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
