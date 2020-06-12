@@ -23,10 +23,6 @@ namespace Playlist_Project.Models
         [Display(Name = "Zip Code")]
         public int ZipCode { get; set; }
 
-        public string Image { get; set; }
-
-
-
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }
         public IdentityUser IdentityUser { get; set; }

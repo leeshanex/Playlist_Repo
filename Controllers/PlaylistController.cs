@@ -21,8 +21,9 @@ namespace Playlist_Project.Controllers
 
         // GET: Playlist
         public async Task<IActionResult> Index()
-        {
-            return View(await _context.Musics.ToListAsync());
+        { 
+            var listOfSongs = await _context.Musics.ToListAsync();
+            return View(listOfSongs);
         }
 
         // GET: Playlist/Details/5
@@ -152,8 +153,9 @@ namespace Playlist_Project.Controllers
 
         public ActionResult Random()
         {
+            string genre = "Hip-Hop";
             Random r = new Random();
-            var randomPlaylist = _context.Musics.OrderBy(m => r.Next()).Take(10);
+            var randomPlaylist = _context.Musics.Where(m => m.Genre == genre).OrderBy(m => r.Next()).Take(10).ToList();
             return View(randomPlaylist);
         }
 

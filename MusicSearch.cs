@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json;
-using System.Net.Http;
-using System.Threading.Tasks;
-
+﻿
 namespace Playlist_Project.Models
 {
-    public class MusicSearch
+    public class MusicData
     {
         public Datum[] data { get; set; }
         public int total { get; set; }
@@ -57,5 +54,5 @@ namespace Playlist_Project.Models
         public string tracklist { get; set; }
         public string type { get; set; }
     }
-
 }
+

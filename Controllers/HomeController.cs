@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Playlist_Project.Data;
 using Playlist_Project.Models;
+using Playlist_Project.Services;
 
 namespace Playlist_Project.Controllers
 {
@@ -14,18 +15,16 @@ namespace Playlist_Project.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        public HomeController(ApplicationDbContext context)
+        
+        private MusicSearchService _musicSearchService;
+        public HomeController(MusicSearchService musicSearchService)
         {
-            _context = context;
+            _musicSearchService = musicSearchService;
         }
 
         public IActionResult Index()
         {
-            string genre = "Hip-Hop";
-            Random r = new Random();
-            var randomPlaylist = _context.Musics.Where(m => m.Genre == genre).OrderBy(m => r.Next()).Take(10);
-            var displyRandomPlaylist = randomPlaylist;
-            return View(displyRandomPlaylist);
+            return View();
         }
 
         public IActionResult Privacy()
@@ -37,6 +36,14 @@ namespace Playlist_Project.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public async Task<IActionResult> MusicSearch()
+        {
+            
+            Datum searchedMusic = await _musicSearchService.GetMusicSearched();
+
+            var displaySampleTrack = searchedMusic;
+            return View(displaySampleTrack);
         }
     }
 }
