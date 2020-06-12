@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Playlist_Proj.Models.UserProfile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FavoriteMusicGenre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FriendsList)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LikedMusic)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FavoriteMusicGenre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FriendsList)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LikedMusic)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Image">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Image">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Image">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
