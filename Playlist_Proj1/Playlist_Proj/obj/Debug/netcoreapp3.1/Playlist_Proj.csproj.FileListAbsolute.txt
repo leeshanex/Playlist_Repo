@@ -343,6 +343,7 @@ F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.csprojAssemblyReference.cache
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.csproj.CoreCompileInputs.cache
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.MvcApplicationPartsAssemblyInfo.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.MvcApplicationPartsAssemblyInfo.cache
@@ -361,7 +362,6 @@ F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\Home\MusicSearch.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\NewUsers\Create.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\NewUsers\Delete.cshtml.g.cs
