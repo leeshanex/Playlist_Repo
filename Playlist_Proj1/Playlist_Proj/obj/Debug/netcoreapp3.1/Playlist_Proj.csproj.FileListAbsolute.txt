@@ -193,3 +193,13 @@ F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj1
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UserProfiles\Details.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UserProfiles\Edit.cshtml.g.cs
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UserProfiles\Index.cshtml.g.cs
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.csprojAssemblyReference.cache
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.csproj.CoreCompileInputs.cache
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.MvcApplicationPartsAssemblyInfo.cs
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.MvcApplicationPartsAssemblyInfo.cache
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.RazorAssemblyInfo.cache
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.RazorAssemblyInfo.cs
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.AssemblyInfoInputs.cache
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.AssemblyInfo.cs
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.dll
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.pdb

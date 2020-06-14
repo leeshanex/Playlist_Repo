@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Playlist_Proj.Models;
+using Playlist_Proj.Services;
 
 namespace Playlist_Proj.Controllers
 {
@@ -13,6 +14,7 @@ namespace Playlist_Proj.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        private MusicSearchService _musicSearchService;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

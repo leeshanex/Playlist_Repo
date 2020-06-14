@@ -420,7 +420,7 @@ namespace Playlist_Project.Data
         public DbSet<NewUser> NewUsers { get; set; }
        
         public DbSet<UserProfile> UserProfiles { get; set; }
-
+        public DbSet<FriendsList> FriendsLists { get; set; }
 
     }
 }
