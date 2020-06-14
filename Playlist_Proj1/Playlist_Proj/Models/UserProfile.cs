@@ -9,7 +9,7 @@ namespace Playlist_Proj.Models
     public class UserProfile
     {
         [Key]
-        public int UserProfileId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Profile Picture")]
         public string Image { get; set; }

@@ -9,7 +9,7 @@ namespace Playlist_Proj.Models
     public class NewUser
     {
         [Key]
-        public int NewUserId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
