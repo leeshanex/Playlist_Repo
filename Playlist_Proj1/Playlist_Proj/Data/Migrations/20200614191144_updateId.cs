@@ -60,7 +60,7 @@ namespace Playlist_Proj.Data.Migrations
                 column: "Friend1Id",
                 principalTable: "NewUsers",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Friends_NewUsers_Friend2Id",
@@ -68,7 +68,7 @@ namespace Playlist_Proj.Data.Migrations
                 column: "Friend2Id",
                 principalTable: "NewUsers",
                 principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -129,7 +129,7 @@ namespace Playlist_Proj.Data.Migrations
                 column: "Friend1Id",
                 principalTable: "NewUsers",
                 principalColumn: "NewUserId",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Friends_NewUsers_Friend2Id",
@@ -137,7 +137,7 @@ namespace Playlist_Proj.Data.Migrations
                 column: "Friend2Id",
                 principalTable: "NewUsers",
                 principalColumn: "NewUserId",
-                onDelete: ReferentialAction.Cascade);
+                onDelete: ReferentialAction.NoAction);
         }
     }
 }

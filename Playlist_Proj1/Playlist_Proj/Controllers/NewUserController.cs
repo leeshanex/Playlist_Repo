@@ -22,7 +22,8 @@ namespace Playlist_Proj.Controllers
         // GET: NewUsers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.NewUsers.ToListAsync());
+            
+            return View();
         }
 
         // GET: NewUsers/Details/5

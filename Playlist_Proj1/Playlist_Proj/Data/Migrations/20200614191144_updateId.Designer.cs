@@ -365,13 +365,13 @@ namespace Playlist_Proj.Data.Migrations
                     b.HasOne("Playlist_Proj.Models.NewUser", "Friend1")
                         .WithMany()
                         .HasForeignKey("Friend1Id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Playlist_Proj.Models.NewUser", "Friend2")
                         .WithMany()
                         .HasForeignKey("Friend2Id")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618
