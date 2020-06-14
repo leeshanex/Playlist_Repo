@@ -8953,19 +8953,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leeshane\\.nuget\\packages\\": {}
+    "C:\\Users\\Theng\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
+      "projectUniqueName": "C:\\Users\\Theng\\Documents\\devCodeCamp\\Projects\\Playlist_GroupProj\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
       "projectName": "Playlist_Proj",
-      "projectPath": "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
-      "packagesPath": "C:\\Users\\leeshane\\.nuget\\packages\\",
-      "outputPath": "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\obj\\",
+      "projectPath": "C:\\Users\\Theng\\Documents\\devCodeCamp\\Projects\\Playlist_GroupProj\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
+      "packagesPath": "C:\\Users\\Theng\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Theng\\Documents\\devCodeCamp\\Projects\\Playlist_GroupProj\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leeshane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Theng\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9032,6 +9032,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.2, 3.1.2]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9040,7 +9046,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

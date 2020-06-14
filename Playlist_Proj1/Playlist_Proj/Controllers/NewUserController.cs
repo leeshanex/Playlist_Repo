@@ -22,7 +22,7 @@ namespace Playlist_Proj.Controllers
         // GET: NewUsers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.NewUser.ToListAsync());
+            return View(await _context.NewUsers.ToListAsync());
         }
 
         // GET: NewUsers/Details/5
@@ -33,7 +33,7 @@ namespace Playlist_Proj.Controllers
                 return NotFound();
             }
 
-            var newUser = await _context.NewUser
+            var newUser = await _context.NewUsers
                 .FirstOrDefaultAsync(m => m.FirstName == id);
             if (newUser == null)
             {
@@ -73,7 +73,7 @@ namespace Playlist_Proj.Controllers
                 return NotFound();
             }
 
-            var newUser = await _context.NewUser.FindAsync(id);
+            var newUser = await _context.NewUsers.FindAsync(id);
             if (newUser == null)
             {
                 return NotFound();
@@ -124,7 +124,7 @@ namespace Playlist_Proj.Controllers
                 return NotFound();
             }
 
-            var newUser = await _context.NewUser
+            var newUser = await _context.NewUsers
                 .FirstOrDefaultAsync(m => m.FirstName == id);
             if (newUser == null)
             {
@@ -139,15 +139,15 @@ namespace Playlist_Proj.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var newUser = await _context.NewUser.FindAsync(id);
-            _context.NewUser.Remove(newUser);
+            var newUser = await _context.NewUsers.FindAsync(id);
+            _context.NewUsers.Remove(newUser);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool NewUserExists(string id)
         {
-            return _context.NewUser.Any(e => e.FirstName == id);
+            return _context.NewUsers.Any(e => e.FirstName == id);
         }
     }
 }

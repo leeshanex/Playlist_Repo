@@ -16,7 +16,7 @@ namespace Playlist_Proj.Data
              protected override void OnModelCreating(ModelBuilder builder)
         {
             {
-                base.OnModelCreating(builder);
+                //base.OnModelCreating(builder);
 
                 builder
                     .HasAnnotation("ProductVersion", "3.0.1")
