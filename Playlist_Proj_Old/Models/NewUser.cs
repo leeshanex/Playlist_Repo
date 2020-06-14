@@ -24,8 +24,5 @@ namespace Playlist_Project.Models
         public int ZipCode { get; set; }
         
 
-        [ForeignKey("IdentityUser")]
-        public string IdentityUserId { get; set; }
-        public IdentityUser IdentityUser { get; set; }
     }
 }

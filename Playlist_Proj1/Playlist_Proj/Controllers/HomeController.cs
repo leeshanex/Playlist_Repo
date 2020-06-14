@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using Playlist_Proj.Models;
 using Playlist_Proj.Services;
@@ -14,9 +15,10 @@ namespace Playlist_Proj.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        private MusicSearchService _musicSearchService;
+       
         public HomeController(ILogger<HomeController> logger)
         {
+            
             _logger = logger;
         }
 
@@ -36,4 +38,5 @@ namespace Playlist_Proj.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
+
 }

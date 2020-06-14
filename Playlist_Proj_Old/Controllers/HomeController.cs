@@ -32,20 +32,18 @@ namespace Playlist_Project.Controllers
             return View();
         }
 
-        public IActionResult MusicSearch()
-        {
-
-            //Datum searchedMusic = await _musicSearchService.GetMusicSearched();
-
-            //var displaySampleTrack = searchedMusic;
-            return View();
-        }
-
+       
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-       
+
+        public async Task<IActionResult> MusicSearch()
+        {
+            Datum musicData = await _musicSearchService.GetMusicSearched();
+            var displayMusicData = musicData;
+            return Ok(displayMusicData);
+        }
     }
 }

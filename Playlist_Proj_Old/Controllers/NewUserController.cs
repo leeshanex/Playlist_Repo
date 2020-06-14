@@ -29,8 +29,8 @@ namespace Playlist_Project.Controllers
             NewUser newUser;
             try
             {
-                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier); //gets your nameIdentifer
-                newUser = _context.NewUsers.Where(c => c.IdentityUserId == userId).Single();
+                var userId = newUser.Id; //gets your nameIdentifer
+                newUser = _context.NewUsers.Where(c => c.Id == userId).Single();
             }
             catch (Exception)
             {
