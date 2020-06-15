@@ -12,6 +12,8 @@
     <Compile Remove="Data\Migrations\20200614191144_updateId.Designer.cs" />
     <Compile Remove="Data\Migrations\20200614235428_commentedOutFriendsForeignKey.cs" />
     <Compile Remove="Data\Migrations\20200614235428_commentedOutFriendsForeignKey.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200615000910_IdUpdate.cs" />
+    <Compile Remove="Data\Migrations\20200615000910_IdUpdate.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
