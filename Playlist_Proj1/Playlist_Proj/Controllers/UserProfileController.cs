@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -20,140 +22,107 @@ namespace Playlist_Proj.Controllers
         }
 
         // GET: UserProfiles
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.UserProfiles.ToListAsync());
+            NewUser newUser;
+            try
+            {
+                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier); //gets your nameIdentifer
+                newUser = _context.NewUsers.Where(c => c.IdentityUserId == userId).Single();
+
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("create"); //if fails then creates 
+            }
+            return View(newUser);
         }
 
-        // GET: UserProfiles/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var userProfile = await _context.UserProfiles
-                .FirstOrDefaultAsync(m => m.Image == id);
-            if (userProfile == null)
+            var newUser = await _context.NewUsers.Include(c => c.IdentityUser).FirstOrDefaultAsync(m => m.Id == id);
+
+            if (newUser == null)
             {
                 return NotFound();
             }
 
-            return View(userProfile);
+            return View(newUser);
         }
 
-        // GET: UserProfiles/Create
-        public IActionResult Create()
+        // GET: UserProfile/Create
+        public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UserProfiles/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: UserProfile/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Image,FavoriteMusicGenre,FriendsList,LikedMusic")] UserProfile userProfile)
+        public ActionResult Create(IFormCollection collection)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(userProfile);
-                await _context.SaveChangesAsync();
+                // TODO: Add insert logic here
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(userProfile);
+            catch
+            {
+                return View();
+            }
         }
 
-        // GET: UserProfiles/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        // GET: UserProfile/Edit/5
+        public ActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var userProfile = await _context.UserProfiles.FindAsync(id);
-            if (userProfile == null)
-            {
-                return NotFound();
-            }
-            return View(userProfile);
+            return View();
         }
 
-        // POST: UserProfiles/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: UserProfile/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Image,FavoriteMusicGenre,FriendsList,LikedMusic")] UserProfile userProfile)
+        public ActionResult Edit(int id, IFormCollection collection)
         {
-            if (id != userProfile.Image)
+            try
             {
-                return NotFound();
-            }
+                // TODO: Add update logic here
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(userProfile);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserProfileExists(userProfile.Image))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
                 return RedirectToAction(nameof(Index));
             }
-            return View(userProfile);
+            catch
+            {
+                return View();
+            }
         }
 
-        // GET: UserProfiles/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        // GET: UserProfile/Delete/5
+        public ActionResult Delete(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var userProfile = await _context.UserProfiles
-                .FirstOrDefaultAsync(m => m.Image == id);
-            if (userProfile == null)
-            {
-                return NotFound();
-            }
-
-            return View(userProfile);
+            return View();
         }
 
-        // POST: UserProfiles/Delete/5
-        [HttpPost, ActionName("Delete")]
+        // POST: UserProfile/Delete/5
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public ActionResult Delete(int id, IFormCollection collection)
         {
-            var userProfile = await _context.UserProfiles.FindAsync(id);
-            _context.UserProfiles.Remove(userProfile);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            try
+            {
+                // TODO: Add delete logic here
 
-        private bool UserProfileExists(string id)
-        {
-            return _context.UserProfiles.Any(e => e.Image == id);
-        }
-
-        public async Task<IActionResult> UserProfile()
-        {
-            var userPage = await _context.UserProfiles.ToListAsync();
-            return View(userPage);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
