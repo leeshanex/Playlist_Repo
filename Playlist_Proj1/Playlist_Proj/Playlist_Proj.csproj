@@ -6,6 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migrations\20200614151155_idUpdate.cs" />
+    <Compile Remove="Data\Migrations\20200614151155_idUpdate.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200614191144_updateId.cs" />
+    <Compile Remove="Data\Migrations\20200614191144_updateId.Designer.cs" />
+    <Compile Remove="Data\Migrations\20200614235428_commentedOutFriendsForeignKey.cs" />
+    <Compile Remove="Data\Migrations\20200614235428_commentedOutFriendsForeignKey.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.3" />

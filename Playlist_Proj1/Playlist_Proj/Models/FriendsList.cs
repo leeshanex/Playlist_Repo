@@ -14,7 +14,7 @@ namespace Playlist_Proj.Models
         public int Friend1Id { get; set; }
         public NewUser Friend1 { get; set; }
 
-        [ForeignKey("Friend2")]
+       [ForeignKey("Friend2")]
 
         public int Friend2Id { get; set; }
         public NewUser Friend2 { get; set; }
