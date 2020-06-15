@@ -3,11 +3,19 @@
 @inject UserManager<IdentityUser> UserManager
 
 
+    <style>
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
     <ul class="navbar-nav dropdown">
         @if (SignInManager.IsSignedIn(User))
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Views" asp-page="/UserProfiles/UserProfile" title="Profile">Profile</a>
+                <a class="nav-link text-dark" asp-area="Views" asp-page="/UserProfiles/UserProfile" title="Profile"><img src="https://image.shutterstock.com/image-vector/social-member-vector-icon-person-260nw-1139787308.jpg" alt="Avatar" class="avatar"> Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Settings</a>

@@ -14,6 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Playlist_Proj.Models;
 using Playlist_Proj.Services;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
+using Playlist_Proj.ActionFilters;
 
 namespace Playlist_Proj
 {
@@ -34,6 +37,8 @@ namespace Playlist_Proj
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<ClaimsPrincipal>(s => s.GetService<IHttpContextAccessor>().HttpContext.User); 
+            services.AddControllers(config => { config.Filters.Add(typeof(GlobalRouting)); });
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddScoped<MusicSearchService>();

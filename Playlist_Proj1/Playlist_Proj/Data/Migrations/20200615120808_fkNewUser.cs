@@ -2,7 +2,7 @@
 
 namespace Playlist_Proj.Data.Migrations
 {
-    public partial class @new : Migration
+    public partial class fkNewUser : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

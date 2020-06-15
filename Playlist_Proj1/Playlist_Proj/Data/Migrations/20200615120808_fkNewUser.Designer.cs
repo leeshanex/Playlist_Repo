@@ -10,8 +10,8 @@ using Playlist_Proj.Data;
 namespace Playlist_Proj.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200615032122_new")]
-    partial class @new
+    [Migration("20200615120808_fkNewUser")]
+    partial class fkNewUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -604,6 +604,9 @@ namespace Playlist_Proj.Data.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
@@ -611,6 +614,8 @@ namespace Playlist_Proj.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdentityUserId");
 
                     b.ToTable("NewUsers");
                 });
@@ -688,6 +693,13 @@ namespace Playlist_Proj.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Playlist_Proj.Models.NewUser", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
                 });
 #pragma warning restore 612, 618
         }
