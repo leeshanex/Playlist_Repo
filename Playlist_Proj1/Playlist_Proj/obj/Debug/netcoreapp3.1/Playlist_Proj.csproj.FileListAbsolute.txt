@@ -594,4 +594,9 @@ C:\Users\Theng\Documents\devCodeCamp\Projects\Playlist_GroupProj\Playlist_Repo\P
 C:\Users\Theng\Documents\devCodeCamp\Projects\Playlist_GroupProj\Playlist_Repo\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.genruntimeconfig.cache
 =======
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.genruntimeconfig.cache
+<<<<<<< HEAD
 >>>>>>> aa27f948b7c952c4fb2d75b00474f878075e2025
+=======
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UserProfiles\UserProfile.cshtml.g.cs
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.csprojAssemblyReference.cache
+>>>>>>> e6631cc3a49a0bbd80551d6b5f983d3504f8ec83

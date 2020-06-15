@@ -1,0 +1,43 @@
+﻿@model Playlist_Proj.Models.UserProfile
+
+@{
+    ViewData["Title"] = "UserProfile";
+}
+
+<h1>UserProfile</h1>
+
+<h4>UserProfile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UserProfile">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FavoriteMusicGenre" class="control-label"></label>
+                <input asp-for="FavoriteMusicGenre" class="form-control" />
+                <span asp-validation-for="FavoriteMusicGenre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FriendsList" class="control-label"></label>
+                <input asp-for="FriendsList" class="form-control" />
+                <span asp-validation-for="FriendsList" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LikedMusic" class="control-label"></label>
+                <input asp-for="LikedMusic" class="form-control" />
+                <span asp-validation-for="LikedMusic" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
