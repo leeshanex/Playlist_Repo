@@ -13,10 +13,6 @@ namespace Playlist_Proj.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-<<<<<<< HEAD
-            {
-                //base.OnModelCreating(builder);
-=======
         }
         public DbSet<NewUser> NewUsers { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
@@ -25,12 +21,7 @@ namespace Playlist_Proj.Data
         protected override void OnModelCreating(ModelBuilder builder)
 
         {
-<<<<<<< HEAD
-          base.OnModelCreating(builder);
->>>>>>> aa27f948b7c952c4fb2d75b00474f878075e2025
-=======
             base.OnModelCreating(builder);
->>>>>>> b0fade32cce565b8035a39482af0a7336db2f91c
 
             builder
                         .HasAnnotation("ProductVersion", "3.0.1")
