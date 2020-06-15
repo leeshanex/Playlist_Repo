@@ -22,7 +22,12 @@ namespace Playlist_Proj.Controllers
         // GET: NewUsers
         public async Task<IActionResult> Index()
         {
+
             return View(await _context.NewUsers.ToListAsync());
+
+            var newUserInfo = await _context.NewUsers.ToListAsync();
+            return View(newUserInfo);
+
         }
 
         // GET: NewUsers/Details/5

@@ -20,9 +20,9 @@ namespace Playlist_Proj.Controllers
         }
 
         // GET: UserProfiles
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.UserProfiles.ToListAsync());
+            return View();
         }
 
         // GET: UserProfiles/Details/5
@@ -148,6 +148,11 @@ namespace Playlist_Proj.Controllers
         private bool UserProfileExists(string id)
         {
             return _context.UserProfiles.Any(e => e.Image == id);
+        }
+        public async Task<IActionResult> UserProfile()
+        {
+            var userPage = await _context.UserProfiles.ToListAsync();
+            return View(userPage);
         }
     }
 }

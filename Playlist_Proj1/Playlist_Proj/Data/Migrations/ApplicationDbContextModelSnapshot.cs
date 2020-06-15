@@ -15,7 +15,7 @@ namespace Playlist_Proj.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.4")
+                .HasAnnotation("ProductVersion", "3.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -219,9 +219,390 @@ namespace Playlist_Proj.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Playlist_Proj.Models.Music", b =>
+                {
+                    b.Property<int>("SongId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Artist")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SongTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SongId");
+
+                    b.ToTable("Music");
+
+                    b.HasData(
+                        new
+                        {
+                            SongId = 1,
+                            Artist = "Roddy Ricch",
+                            Genre = "Hip-Hop",
+                            SongTitle = "The Box"
+                        },
+                        new
+                        {
+                            SongId = 2,
+                            Artist = "Meg Thee Stallion, Beyonce",
+                            Genre = "Hip-Hop",
+                            SongTitle = "Savage Remix"
+                        },
+                        new
+                        {
+                            SongId = 3,
+                            Artist = "Run-D.M.C.",
+                            Genre = "Hip-Hop",
+                            SongTitle = "It's Tricky"
+                        },
+                        new
+                        {
+                            SongId = 4,
+                            Artist = "DaBaby",
+                            Genre = "Hip-Hop",
+                            SongTitle = "BOP"
+                        },
+                        new
+                        {
+                            SongId = 5,
+                            Artist = "Drake, Future",
+                            Genre = "Hip-Hop",
+                            SongTitle = "Life Is Good"
+                        },
+                        new
+                        {
+                            SongId = 6,
+                            Artist = "Kendrick Lamar",
+                            Genre = "Hip-Hop",
+                            SongTitle = "DNA"
+                        },
+                        new
+                        {
+                            SongId = 7,
+                            Artist = "Big Sean",
+                            Genre = "Hip-Hop",
+                            SongTitle = "I Don't F**k With You"
+                        },
+                        new
+                        {
+                            SongId = 8,
+                            Artist = "Cardi B",
+                            Genre = "Hip-Hop",
+                            SongTitle = "I Like It"
+                        },
+                        new
+                        {
+                            SongId = 9,
+                            Artist = "Jay-Z",
+                            Genre = "Hip-Hop",
+                            SongTitle = "Big Pimpin"
+                        },
+                        new
+                        {
+                            SongId = 10,
+                            Artist = "Kanye West",
+                            Genre = "Hip-Hop",
+                            SongTitle = "All Of The Lights"
+                        },
+                        new
+                        {
+                            SongId = 11,
+                            Artist = "Prince",
+                            Genre = "Rock",
+                            SongTitle = "When Doves Cry"
+                        },
+                        new
+                        {
+                            SongId = 12,
+                            Artist = "Weezer",
+                            Genre = "Rock",
+                            SongTitle = "Island In The Sun"
+                        },
+                        new
+                        {
+                            SongId = 13,
+                            Artist = "The Killers",
+                            Genre = "Rock",
+                            SongTitle = "Mr. Brightside"
+                        },
+                        new
+                        {
+                            SongId = 14,
+                            Artist = "The Beatles",
+                            Genre = "Rock",
+                            SongTitle = "Come Together"
+                        },
+                        new
+                        {
+                            SongId = 15,
+                            Artist = "Journey",
+                            Genre = "Rock",
+                            SongTitle = "Don't Stop Believin"
+                        },
+                        new
+                        {
+                            SongId = 16,
+                            Artist = "AC/DC",
+                            Genre = "Rock",
+                            SongTitle = "Back In Black"
+                        },
+                        new
+                        {
+                            SongId = 17,
+                            Artist = "Red Hot Chili Peppers",
+                            Genre = "Rock",
+                            SongTitle = "Can't Stop"
+                        },
+                        new
+                        {
+                            SongId = 18,
+                            Artist = "The Black Keys",
+                            Genre = "Rock",
+                            SongTitle = "Heavy Soul"
+                        },
+                        new
+                        {
+                            SongId = 19,
+                            Artist = "Nirvana",
+                            Genre = "Rock",
+                            SongTitle = "Come As You Are"
+                        },
+                        new
+                        {
+                            SongId = 20,
+                            Artist = "Guns N' Roses",
+                            Genre = "Rock",
+                            SongTitle = "Sweet Child O' Mine"
+                        },
+                        new
+                        {
+                            SongId = 21,
+                            Artist = "Aviccii",
+                            Genre = "Pop",
+                            SongTitle = "Wake Me Up"
+                        },
+                        new
+                        {
+                            SongId = 22,
+                            Artist = "Imagine Dragons",
+                            Genre = "Pop",
+                            SongTitle = "Radioactive"
+                        },
+                        new
+                        {
+                            SongId = 23,
+                            Artist = "Sara Baraeilles",
+                            Genre = "Pop",
+                            SongTitle = "Love Song"
+                        },
+                        new
+                        {
+                            SongId = 24,
+                            Artist = "Justin Timberlake",
+                            Genre = "Pop",
+                            SongTitle = "My Love"
+                        },
+                        new
+                        {
+                            SongId = 25,
+                            Artist = "Rihanna",
+                            Genre = "Pop",
+                            SongTitle = "Umbrella"
+                        },
+                        new
+                        {
+                            SongId = 26,
+                            Artist = "Gotye",
+                            Genre = "Pop",
+                            SongTitle = "Somebody That I Used To Know"
+                        },
+                        new
+                        {
+                            SongId = 27,
+                            Artist = "Drake",
+                            Genre = "Pop",
+                            SongTitle = "Hotline Bling"
+                        },
+                        new
+                        {
+                            SongId = 28,
+                            Artist = "*NSYNC",
+                            Genre = "Pop",
+                            SongTitle = "Bye Bye Bye"
+                        },
+                        new
+                        {
+                            SongId = 29,
+                            Artist = "Michael Jackson",
+                            Genre = "Pop",
+                            SongTitle = "Thriller"
+                        },
+                        new
+                        {
+                            SongId = 30,
+                            Artist = "Britney Spears",
+                            Genre = "Pop",
+                            SongTitle = "Toxic"
+                        },
+                        new
+                        {
+                            SongId = 31,
+                            Artist = "Daft Punk",
+                            Genre = "Electronic",
+                            SongTitle = "One More Time"
+                        },
+                        new
+                        {
+                            SongId = 32,
+                            Artist = "Martin Garrix",
+                            Genre = "Electronic",
+                            SongTitle = "Animals"
+                        },
+                        new
+                        {
+                            SongId = 33,
+                            Artist = "Rihanna",
+                            Genre = "Electronic",
+                            SongTitle = "We Found Love"
+                        },
+                        new
+                        {
+                            SongId = 34,
+                            Artist = "Lil Jon",
+                            Genre = "Electronic",
+                            SongTitle = "Turn Down For What"
+                        },
+                        new
+                        {
+                            SongId = 35,
+                            Artist = "Swedish House Mafia",
+                            Genre = "Electronic",
+                            SongTitle = "Don't You Worry Child"
+                        },
+                        new
+                        {
+                            SongId = 36,
+                            Artist = "Mr. Probz",
+                            Genre = "Electronic",
+                            SongTitle = "Waves"
+                        },
+                        new
+                        {
+                            SongId = 37,
+                            Artist = "Zedd",
+                            Genre = "Electronic",
+                            SongTitle = "I Want you To Know"
+                        },
+                        new
+                        {
+                            SongId = 38,
+                            Artist = "Diplo, Skrillex, Justin Bieber",
+                            Genre = "Electronic",
+                            SongTitle = "Where Are U Now"
+                        },
+                        new
+                        {
+                            SongId = 39,
+                            Artist = "Robin Schulz",
+                            Genre = "Electronic",
+                            SongTitle = "Sugar"
+                        },
+                        new
+                        {
+                            SongId = 40,
+                            Artist = "Disclose",
+                            Genre = "Electronic",
+                            SongTitle = "White Noise"
+                        },
+                        new
+                        {
+                            SongId = 41,
+                            Artist = "Ginuwine",
+                            Genre = "R&B",
+                            SongTitle = "Pony"
+                        },
+                        new
+                        {
+                            SongId = 42,
+                            Artist = "Destiny's Child",
+                            Genre = "R&B",
+                            SongTitle = "Say My Name"
+                        },
+                        new
+                        {
+                            SongId = 43,
+                            Artist = "Shaggy",
+                            Genre = "R&B",
+                            SongTitle = "It Wasn't Me"
+                        },
+                        new
+                        {
+                            SongId = 44,
+                            Artist = "Beyonce",
+                            Genre = "R&B",
+                            SongTitle = "Halo"
+                        },
+                        new
+                        {
+                            SongId = 45,
+                            Artist = "Brandy, Monica",
+                            Genre = "R&B",
+                            SongTitle = "The Boy Is Mine"
+                        },
+                        new
+                        {
+                            SongId = 46,
+                            Artist = "Ella Mai",
+                            Genre = "R&B",
+                            SongTitle = "Trip"
+                        },
+                        new
+                        {
+                            SongId = 47,
+                            Artist = "Snoh Aalegra",
+                            Genre = "R&B",
+                            SongTitle = "I Want You Around"
+                        },
+                        new
+                        {
+                            SongId = 48,
+                            Artist = "TLC",
+                            Genre = "R&B",
+                            SongTitle = "Waterfalls"
+                        },
+                        new
+                        {
+                            SongId = 49,
+                            Artist = "Childish Gambino",
+                            Genre = "R&B",
+                            SongTitle = "Redbone"
+                        },
+                        new
+                        {
+                            SongId = 50,
+                            Artist = "Usher, Alica Keys",
+                            Genre = "R&B",
+                            SongTitle = "My Boo"
+                        });
+                });
+
             modelBuilder.Entity("Playlist_Proj.Models.NewUser", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LastName")
@@ -230,15 +611,19 @@ namespace Playlist_Proj.Data.Migrations
                     b.Property<int>("ZipCode")
                         .HasColumnType("int");
 
-                    b.HasKey("FirstName");
+                    b.HasKey("Id");
 
-                    b.ToTable("NewUser");
+                    b.HasIndex("IdentityUserId");
+
+                    b.ToTable("NewUsers");
                 });
 
             modelBuilder.Entity("Playlist_Proj.Models.UserProfile", b =>
                 {
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("FavoriteMusicGenre")
                         .HasColumnType("nvarchar(max)");
@@ -246,12 +631,15 @@ namespace Playlist_Proj.Data.Migrations
                     b.Property<string>("FriendsList")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LikedMusic")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Image");
+                    b.HasKey("Id");
 
-                    b.ToTable("UserProfile");
+                    b.ToTable("UserProfiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -303,6 +691,13 @@ namespace Playlist_Proj.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Playlist_Proj.Models.NewUser", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
                 });
 #pragma warning restore 612, 618
         }

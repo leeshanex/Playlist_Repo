@@ -17,9 +17,9 @@ namespace Playlist_Proj.Services
         public async Task<Datum> GetMusicSearched()
         {
             HttpRequestMessage request = new HttpRequestMessage();
-            string userInput = "odesza";
+            string userInput = "";
             string q = userInput.ToLower();
-            string url = $"https://deezerdevs-deezer.p.rapidapi.com/search?q=odesza";
+            string url = $"https://deezerdevs-deezer.p.rapidapi.com/search?q={q}";
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("x-rapidapi-host", "deezerdevs-deezer.p.rapidapi.com");
             client.DefaultRequestHeaders.Add("x-rapidapi-key", APIKeys.OpenMusicSearchKey);
