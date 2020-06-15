@@ -150,15 +150,30 @@ namespace Playlist_Proj.Controllers
         {
             return _context.Musics.Any(e => e.SongId == id);
         }
+        [HttpGet]
 
         public ActionResult Random()
         {
-            string genre = "Hip-Hop";
-            Random r = new Random();
-            var randomPlaylist = _context.Musics.Where(m => m.Genre == genre).OrderBy(m => r.Next()).Take(10).ToList();
-            return View(randomPlaylist);
+            return View();
         }
 
+        [HttpPost]
+        public ActionResult Random(string genre)
+        {
+            Random r = new Random();
+            var Playlist = _context.Musics.Where(m => m.Genre == genre).ToList();
+            var RandomPlaylist = Playlist.OrderBy(m => r.Next()).Take(10);
+            return View(RandomPlaylist);
+        }
+
+        [HttpGet]
+
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult Search(string Name, string Genre)
         {
             var searchedSong = _context.Musics.Where(m => m.SongTitle == Name && m.Genre == Genre);
