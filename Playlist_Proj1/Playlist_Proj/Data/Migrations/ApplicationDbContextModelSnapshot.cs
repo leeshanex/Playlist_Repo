@@ -15,7 +15,7 @@ namespace Playlist_Proj.Data.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.4")
+                .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -219,10 +219,58 @@ namespace Playlist_Proj.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Playlist_Proj.Models.FriendsList", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Friend1Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Friend2Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Friend1Id");
+
+                    b.HasIndex("Friend2Id");
+
+                    b.ToTable("Friends");
+                });
+
+            modelBuilder.Entity("Playlist_Proj.Models.Music", b =>
+                {
+                    b.Property<int>("SongId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Artist")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SongTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SongId");
+
+                    b.ToTable("Musics");
+                });
+
             modelBuilder.Entity("Playlist_Proj.Models.NewUser", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -230,15 +278,17 @@ namespace Playlist_Proj.Data.Migrations
                     b.Property<int>("ZipCode")
                         .HasColumnType("int");
 
-                    b.HasKey("FirstName");
+                    b.HasKey("Id");
 
-                    b.ToTable("NewUser");
+                    b.ToTable("NewUsers");
                 });
 
             modelBuilder.Entity("Playlist_Proj.Models.UserProfile", b =>
                 {
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("FavoriteMusicGenre")
                         .HasColumnType("nvarchar(max)");
@@ -246,12 +296,15 @@ namespace Playlist_Proj.Data.Migrations
                     b.Property<string>("FriendsList")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LikedMusic")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Image");
+                    b.HasKey("Id");
 
-                    b.ToTable("UserProfile");
+                    b.ToTable("UserProfiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -301,6 +354,21 @@ namespace Playlist_Proj.Data.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Playlist_Proj.Models.FriendsList", b =>
+                {
+                    b.HasOne("Playlist_Proj.Models.NewUser", "Friend1")
+                        .WithMany()
+                        .HasForeignKey("Friend1Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Playlist_Proj.Models.NewUser", "Friend2")
+                        .WithMany()
+                        .HasForeignKey("Friend2Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
