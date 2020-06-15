@@ -392,3 +392,5 @@ F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.dll
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.pdb
 F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.genruntimeconfig.cache
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Razor\Views\UserProfiles\UserProfile.cshtml.g.cs
+F:\devCodeCamp\Week_10_06.05.2020\Group Capstone\Playlist_Project\Playlist_Proj\Playlist_Proj1\Playlist_Proj\obj\Debug\netcoreapp3.1\Playlist_Proj.csprojAssemblyReference.cache

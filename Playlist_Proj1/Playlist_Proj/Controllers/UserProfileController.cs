@@ -149,5 +149,11 @@ namespace Playlist_Proj.Controllers
         {
             return _context.UserProfiles.Any(e => e.Image == id);
         }
+
+        public async Task<IActionResult> UserProfile()
+        {
+            var userPage = await _context.UserProfiles.ToListAsync();
+            return View(userPage);
+        }
     }
 }

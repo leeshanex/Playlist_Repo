@@ -3,14 +3,14 @@
 @inject UserManager<IdentityUser> UserManager
 
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav dropdown">
         @if (SignInManager.IsSignedIn(User))
         {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Settings</a>
+                <a class="nav-link text-dark" asp-area="Views" asp-page="/UserProfiles/UserProfile" title="Profile">Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Views" asp-page="/UserProfile/Index" title="Profile">User Profile</a>
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Settings</a>
             </li>
             <li class="nav-item">
                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
