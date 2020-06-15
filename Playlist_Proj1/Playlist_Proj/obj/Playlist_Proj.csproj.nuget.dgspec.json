@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj": {}
+    "C:\\Users\\KTH\\OneDrive\\Documents\\DevCodeCamp\\Projects\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj": {}
   },
   "projects": {
-    "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj": {
+    "C:\\Users\\KTH\\OneDrive\\Documents\\DevCodeCamp\\Projects\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
+        "projectUniqueName": "C:\\Users\\KTH\\OneDrive\\Documents\\DevCodeCamp\\Projects\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
         "projectName": "Playlist_Proj",
-        "projectPath": "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
-        "packagesPath": "C:\\Users\\leeshane\\.nuget\\packages\\",
-        "outputPath": "F:\\devCodeCamp\\Week_10_06.05.2020\\Group Capstone\\Playlist_Project\\Playlist_Proj\\Playlist_Proj1\\Playlist_Proj\\obj\\",
+        "projectPath": "C:\\Users\\KTH\\OneDrive\\Documents\\DevCodeCamp\\Projects\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\Playlist_Proj.csproj",
+        "packagesPath": "C:\\Users\\KTH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\KTH\\OneDrive\\Documents\\DevCodeCamp\\Projects\\Playlist_Repo\\Playlist_Proj1\\Playlist_Proj\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\leeshane\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\KTH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
